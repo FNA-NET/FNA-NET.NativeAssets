@@ -13,7 +13,7 @@
     <Authors>ryancheung</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>.NET 8 wrapper of MoltenVK native libs for FNA-NET.</Description>
+    <Description>.NET 8 wrapper of FNA native libs for FNA-NET.</Description>
     <PackageTags>fna;xna;net8</PackageTags>
     <PackageId>FNA.NET.NativeAssets</PackageId>
     <Copyright>Copyright 2024 FNA-NET</Copyright>
@@ -37,7 +37,7 @@
     <ObjcBindingApiDefinition Include="DummyApiDefinition.cs" />
     <ObjcBindingCoreSource Include="Dummy.cs" Exclude="" />
 
-    <PackageReference Include="FNA.NET.MoltenVK" Version="1.0.1" />
+    <PackageReference Include="FNA.NET.NativeAssets.MoltenVK" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
