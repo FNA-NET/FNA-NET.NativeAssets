@@ -16,8 +16,4 @@
     <EmbeddedNativeLibrary Include="runtimes\SDL2\android\x86_64\libmain.so" Link="libs\x86_64\libmain.so" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
-    <PackageReference Include="SDL2DroidSharp-JBindings" Version="1.0.2" />
-  </ItemGroup>
-
 </Project>

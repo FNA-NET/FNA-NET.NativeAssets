@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net8.0-windows;net8.0-android;net8.0-ios;net8.0-tvos</TargetFrameworks>
+    <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <VersionPrefix>24.03</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+	</PropertyGroup>
+
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/FNA-NET/FNA</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FNA-NET/FNA-NET.NativeAssets</RepositoryUrl>
+    <Authors>ryancheung</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>.NET 8 wrapper of MoltenVK native libs for FNA-NET.</Description>
+    <PackageTags>fna;xna;net8</PackageTags>
+    <PackageId>FNA.NET.NativeAssets</PackageId>
+    <Copyright>Copyright 2024 FNA-NET</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-ios' or '$(TargetFramework)' == 'net8.0-tvos'">
+    <IsBindingProject>true</IsBindingProject>
+    <NoBindingEmbedding>true</NoBindingEmbedding>
+    <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios' or '$(TargetFramework)' == 'net8.0-tvos'">
+    <ObjcBindingApiDefinition Include="DummyApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="Dummy.cs" Exclude="" />
+
+    <PackageReference Include="FNA.NET.MoltenVK" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="runtimes\FAudio\win-x64\FAudio.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\FAudio\linux-x64\libFAudio.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\FAudio\osx-x64\libFAudio.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+
+    <None Include="runtimes\FNA3D\win-x64\FNA3D.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\FNA3D\linux-x64\libFNA3D.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\FNA3D\osx-x64\libFNA3D.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+
+    <None Include="runtimes\theorafile\win-x64\theorafile.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\theorafile\linux-x64\libtheorafile.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\theorafile\osx-x64\libtheorafile.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+
+    <None Include="runtimes\SDL2\win-x64\SDL2.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\SDL2\linux-x64\libSDL2-2.0.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\SDL2\osx-x64\libSDL2-2.0.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+  </ItemGroup>
+
+  <Import Project="FNA-NET.iOS.targets" />
+  <Import Project="FNA-NET.tvOS.targets" />
+  <Import Project="FNA-NET.Android.targets" />
+</Project>
