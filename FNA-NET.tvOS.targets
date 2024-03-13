@@ -1,0 +1,27 @@
+<Project>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-tvos'">
+    <NativeReference Include="runtimes\FAudio\tvos\FAudio.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>AVFoundation AudioToolbox CoreGraphics Metal QuartzCore OpenGLES GameController CoreBluetooth MobileCoreServices ImageIO CoreHaptics</Frameworks>
+    </NativeReference>
+    <NativeReference Include="runtimes\FNA3D\tvos\FNA3D.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\SDL2\tvos\SDL2.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\Theorafile\tvos\theorafile.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+
+</Project>
