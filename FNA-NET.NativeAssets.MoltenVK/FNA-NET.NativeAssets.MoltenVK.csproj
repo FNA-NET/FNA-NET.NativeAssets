@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
+    <AssemblyName>FNA.NET.MoltenVK</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>$(NoWarn);CS1572;CS1570;</NoWarn>
+    <TargetFrameworks>net8.0-ios;net8.0-tvos;</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+    <NoBindingEmbedding>true</NoBindingEmbedding>
+    <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/FNA-NET/FNA</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FNA-NET/FNA-NET.NativeAssets</RepositoryUrl>
+    <Authors>ryancheung</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Description>.NET 8 wrapper of MoltenVK native libs for FNA-NET.</Description>
+    <PackageTags>fna;xna;net8;ios;moltenvk</PackageTags>
+    <PackageId>FNA.NET.NativeAssets.MoltenVK</PackageId>
+    <Copyright>Copyright 2024 FNA-NET</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <NativeReference Condition="'$(TargetFramework)' == 'net8.0-ios'" Include="runtime\ios\MoltenVK.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>Metal Foundation QuartzCore UIKit IOSurface</Frameworks>
+    </NativeReference>
+
+    <NativeReference Condition="'$(TargetFramework)' == 'net8.0-tvos'" Include="runtime\tvos\MoltenVK.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>Metal Foundation QuartzCore UIKit IOSurface</Frameworks>
+    </NativeReference>
+
+    <ObjcBindingApiDefinition Include="DummyApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="Dummy.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>
