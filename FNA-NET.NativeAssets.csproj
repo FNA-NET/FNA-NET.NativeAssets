@@ -58,7 +58,67 @@
     <None Include="runtimes\SDL2\osx-x64\libSDL2-2.0.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
   </ItemGroup>
 
-  <Import Project="FNA-NET.iOS.targets" />
-  <Import Project="FNA-NET.tvOS.targets" />
-  <Import Project="FNA-NET.Android.targets" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <EmbeddedNativeLibrary Include="runtimes\FAudio\android\arm64-v8a\libFAudio.so" Link="libs\arm64-v8a\libFAudio.so" />
+    <EmbeddedNativeLibrary Include="runtimes\FAudio\android\x86_64\libFAudio.so" Link="libs\x86_64\libFAudio.so" />
+
+    <EmbeddedNativeLibrary Include="runtimes\FNA3D\android\arm64-v8a\libFNA3D.so" Link="libs\arm64-v8a\libFNA3D.so" />
+    <EmbeddedNativeLibrary Include="runtimes\FNA3D\android\x86_64\libFNA3D.so" Link="libs\x86_64\libFNA3D.so" />
+
+    <EmbeddedNativeLibrary Include="runtimes\Theorafile\android\arm64-v8a\libtheorafile.so" Link="libs\arm64-v8a\libtheorafile.so" />
+    <EmbeddedNativeLibrary Include="runtimes\Theorafile\android\x86_64\libtheorafile.so" Link="libs\x86_64\libtheorafile.so" />
+
+    <EmbeddedNativeLibrary Include="runtimes\SDL2\android\arm64-v8a\libSDL2.so" Link="libs\arm64-v8a\libSDL2.so" />
+    <EmbeddedNativeLibrary Include="runtimes\SDL2\android\arm64-v8a\libmain.so" Link="libs\arm64-v8a\libmain.so" />
+    <EmbeddedNativeLibrary Include="runtimes\SDL2\android\x86_64\libSDL2.so" Link="libs\x86_64\libSDL2.so" />
+    <EmbeddedNativeLibrary Include="runtimes\SDL2\android\x86_64\libmain.so" Link="libs\x86_64\libmain.so" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <NativeReference Include="runtimes\FAudio\ios\FAudio.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>AVFoundation AudioToolbox CoreGraphics Metal QuartzCore OpenGLES GameController CoreMotion MobileCoreServices ImageIO CoreHaptics CoreBluetooth</Frameworks>
+    </NativeReference>
+    <NativeReference Include="runtimes\FNA3D\ios\FNA3D.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\SDL2\ios\SDL2.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\Theorafile\ios\theorafile.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-tvos'">
+    <NativeReference Include="runtimes\FAudio\tvos\FAudio.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>AVFoundation AudioToolbox CoreGraphics Metal QuartzCore OpenGLES GameController CoreBluetooth MobileCoreServices ImageIO CoreHaptics</Frameworks>
+    </NativeReference>
+    <NativeReference Include="runtimes\FNA3D\tvos\FNA3D.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\SDL2\tvos\SDL2.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\Theorafile\tvos\theorafile.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
 </Project>
