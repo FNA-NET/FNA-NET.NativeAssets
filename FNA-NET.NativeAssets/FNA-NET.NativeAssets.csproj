@@ -38,7 +38,7 @@
     <ObjcBindingApiDefinition Include="DummyApiDefinition.cs" />
     <ObjcBindingCoreSource Include="Dummy.cs" Exclude="" />
 
-    <PackageReference Include="FNA.NET.NativeAssets.MoltenVK" Version="1.0.1" />
+    <PackageReference Include="FNA.NET.NativeAssets.MoltenVK" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
