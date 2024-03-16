@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
-    <AssemblyName>FNA.NET.MoltenVK</AssemblyName>
+    <AssemblyName>FNA.NET.NativeAssets.MoltenVK</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoWarn>$(NoWarn);CS1572;CS1570;</NoWarn>
     <TargetFrameworks>net8.0-ios;net8.0-tvos;</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <NoBindingEmbedding>true</NoBindingEmbedding>
     <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <VersionSuffix></VersionSuffix>
   </PropertyGroup>
 
