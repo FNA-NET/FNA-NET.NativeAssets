@@ -43,20 +43,20 @@
 
   <ItemGroup>
     <None Include="runtimes\FAudio\win-x64\FAudio.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
-    <None Include="runtimes\FAudio\linux-x64\libFAudio.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
-    <None Include="runtimes\FAudio\osx-x64\libFAudio.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+    <None Include="runtimes\FAudio\linux-x64\libFAudio.so.0" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\FAudio\osx-x64\libFAudio.0.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
 
     <None Include="runtimes\FNA3D\win-x64\FNA3D.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
-    <None Include="runtimes\FNA3D\linux-x64\libFNA3D.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
-    <None Include="runtimes\FNA3D\osx-x64\libFNA3D.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+    <None Include="runtimes\FNA3D\linux-x64\libFNA3D.so.0" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\FNA3D\osx-x64\libFNA3D.0.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
 
-    <None Include="runtimes\theorafile\win-x64\theorafile.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\theorafile\win-x64\libtheorafile.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
     <None Include="runtimes\theorafile\linux-x64\libtheorafile.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
     <None Include="runtimes\theorafile\osx-x64\libtheorafile.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
 
     <None Include="runtimes\SDL2\win-x64\SDL2.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
-    <None Include="runtimes\SDL2\linux-x64\libSDL2-2.0.so" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
-    <None Include="runtimes\SDL2\osx-x64\libSDL2-2.0.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
+    <None Include="runtimes\SDL2\linux-x64\libSDL2-2.0.so.0" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\SDL2\osx-x64\libSDL2-2.0.0.dylib" Pack="true" PackagePath="runtimes\osx-x64\native\"/>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
