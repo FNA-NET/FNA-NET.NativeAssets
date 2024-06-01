@@ -22,3 +22,4 @@ jobs:
           path: |
             FNA-NET.NativeAssets/bin/Release/*.nupkg
             FNA-NET.NativeAssets.MoltenVK/bin/Release/*.nupkg
+            FNA-NET.NativeAssets.UWP/bin/Release/*.nupkg
