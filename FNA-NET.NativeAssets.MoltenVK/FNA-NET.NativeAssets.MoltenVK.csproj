@@ -9,7 +9,7 @@
     <IsBindingProject>true</IsBindingProject>
     <NoBindingEmbedding>true</NoBindingEmbedding>
     <SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
-    <VersionPrefix>1.0.2</VersionPrefix>
+    <VersionPrefix>1.0.3</VersionPrefix>
     <VersionSuffix></VersionSuffix>
   </PropertyGroup>
 
