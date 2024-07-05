@@ -4,5 +4,5 @@
 
 ### MoltenVK version wrapper
 
-v1.2.7
+https://github.com/godotengine/moltenvk-osxcross/releases/tag/vulkan-sdk-1.3.283.0
 
