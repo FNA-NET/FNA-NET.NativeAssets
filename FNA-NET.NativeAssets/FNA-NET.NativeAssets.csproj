@@ -4,7 +4,7 @@
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <AssemblyName>FNA.NET.NativeAssets</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <VersionPrefix>1.0.4.2403</VersionPrefix>
+    <VersionPrefix>1.0.5.2403</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 	</PropertyGroup>
 
@@ -38,7 +38,7 @@
     <ObjcBindingApiDefinition Include="DummyApiDefinition.cs" />
     <ObjcBindingCoreSource Include="Dummy.cs" Exclude="" />
 
-    <PackageReference Include="FNA.NET.NativeAssets.MoltenVK" Version="1.0.2" />
+    <PackageReference Include="FNA.NET.NativeAssets.MoltenVK" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
