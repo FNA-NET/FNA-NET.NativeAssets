@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
+    <AssemblyName>FNA.NET.NativeAssets.UWP</AssemblyName>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <VersionPrefix>1.0.6.2403</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+	</PropertyGroup>
+
+  <PropertyGroup>
+    <PackageProjectUrl>https://github.com/FNA-NET/FNA</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FNA-NET/FNA-NET.NativeAssets</RepositoryUrl>
+    <Authors>ryancheung</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>UWP wrapper of FNA native libs for FNA-NET.</Description>
+    <PackageTags>fna;xna;uap10.0</PackageTags>
+    <PackageId>FNA.NET.NativeAssets.UWP</PackageId>
+    <Copyright>Copyright 2024 FNA-NET</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="runtimes\FAudio\win10-x64\FAudio.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\FAudio\win10-x64\FAudio.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\FNA3D\win10-x64\FNA3D.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\FNA3D\win10-x64\FNA3D.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\theorafile\win10-x64\libtheorafile.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\theorafile\win10-x64\libtheorafile.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\SDL2\win10-x64\SDL2.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\SDL2\win10-x64\SDL2.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+  </ItemGroup>
+
+</Project>
