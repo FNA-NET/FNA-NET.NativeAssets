@@ -21,3 +21,4 @@ jobs:
           name: ${{ github.event.repository.name }} Artifacts
           path: |
             FNA-NET.NativeAssets/bin/Release/*.nupkg
+            FNA-NET.NativeAssets.UWP/bin/Release/*.nupkg
