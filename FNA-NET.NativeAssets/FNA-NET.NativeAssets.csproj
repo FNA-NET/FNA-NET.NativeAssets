@@ -4,7 +4,7 @@
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <AssemblyName>FNA.NET.NativeAssets</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <VersionPrefix>2.0.0.2506</VersionPrefix>
+    <VersionPrefix>2.0.1.2506</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 	</PropertyGroup>
 
