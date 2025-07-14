@@ -1,10 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <AssemblyName>FNA.NET.NativeAssets.UWP</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <VersionPrefix>1.0.6.2403</VersionPrefix>
+    <VersionPrefix>1.1.0.2403</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 	</PropertyGroup>
 
@@ -25,14 +27,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="runtimes\FAudio\win10-x64\FAudio.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\FAudio\win10-x64\FAudio.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\FNA3D\win10-x64\FNA3D.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\FNA3D\win10-x64\FNA3D.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\theorafile\win10-x64\libtheorafile.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\theorafile\win10-x64\libtheorafile.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\SDL2\win10-x64\SDL2.dll" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
-    <None Include="runtimes\SDL2\win10-x64\SDL2.pri" Pack="true" PackagePath="runtimes\win10-x64\native\"/>
+    <None Include="runtimes\FAudio\win10-x64\FAudio.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\FAudio\win10-x64\FAudio.pri" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\FNA3D\win10-x64\FNA3D.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\FNA3D\win10-x64\FNA3D.pri" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\theorafile\win10-x64\libtheorafile.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\theorafile\win10-x64\libtheorafile.pri" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\SDL2\win10-x64\SDL2.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\SDL2\win10-x64\SDL2.pri" Pack="true" PackagePath="runtimes\win-x64\native\"/>
   </ItemGroup>
 
 </Project>
