@@ -4,7 +4,7 @@
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <AssemblyName>FNA.NET.NativeAssets</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <VersionPrefix>2.1.0.2602</VersionPrefix>
+    <VersionPrefix>2.1.1.2602</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 	</PropertyGroup>
 
@@ -59,6 +59,11 @@
     <None Include="runtimes\SDL3\linux-x64\libSDL3.so.0" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
     <None Include="runtimes\SDL3\linux-arm64\libSDL3.so.0" Pack="true" PackagePath="runtimes\linux-arm64\native\"/>
     <None Include="runtimes\SDL3\osx\libSDL3.0.dylib" Pack="true" PackagePath="runtimes\osx\native\"/>
+
+    <None Include="runtimes\dav1dfile\win-x64\dav1dfile.dll" Pack="true" PackagePath="runtimes\win-x64\native\"/>
+    <None Include="runtimes\dav1dfile\linux-x64\libdav1dfile.so.0" Pack="true" PackagePath="runtimes\linux-x64\native\"/>
+    <None Include="runtimes\dav1dfile\linux-arm64\libdav1dfile.so.0" Pack="true" PackagePath="runtimes\linux-arm64\native\"/>
+    <None Include="runtimes\dav1dfile\osx\libdav1dfile.1.dylib" Pack="true" PackagePath="runtimes\osx\native\"/>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-android'">
@@ -69,6 +74,8 @@
     <EmbeddedNativeLibrary Include="runtimes\Theorafile\android\arm64-v8a\libtheorafile.so" Link="libs\arm64-v8a\libtheorafile.so" />
 
     <EmbeddedNativeLibrary Include="runtimes\SDL3\android\arm64-v8a\libSDL3.so" Link="libs\arm64-v8a\libSDL3.so" />
+
+    <EmbeddedNativeLibrary Include="runtimes\dav1dfile\android\arm64-v8a\libdav1dfile.so" Link="libs\arm64-v8a\libdav1dfile.so" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios'">
@@ -98,6 +105,11 @@
       <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
     </NativeReference>
+    <NativeReference Include="runtimes\dav1dfile\ios\dav1dfile.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-tvos'">
@@ -123,6 +135,11 @@
       <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="runtimes\Theorafile\tvos\theorafile.xcframework">
+      <Kind>Static</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+    <NativeReference Include="runtimes\dav1dfile\tvos\dav1dfile.xcframework">
       <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
       <ForceLoad>True</ForceLoad>
