@@ -6,7 +6,7 @@
     <RootNamespace>Microsoft.Xna.Framework</RootNamespace>
     <AssemblyName>FNA.NET.NativeAssets.UWP</AssemblyName>
     <EnableDefaultItems>false</EnableDefaultItems>
-    <VersionPrefix>2.0.2.2602</VersionPrefix>
+    <VersionPrefix>2.0.3.2602</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 	</PropertyGroup>
 
